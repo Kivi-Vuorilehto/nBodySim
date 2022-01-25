@@ -68,7 +68,7 @@ public class nBodySim {
                     if (i != j) {
                         double xComp = xPos[j] / 100 - xPos[i] / 100;
                         double yComp = yPos[j] / 100 - yPos[i] / 100;
-                        //yComp  += -1;
+                        
                         double r = Math.sqrt((Math.pow(xComp, 2) + Math.pow(yComp, 2)));
                         double F = (6.67e-11 * mass[i] * mass[j]) / Math.pow(r, 2);
                         fx[i] += F * (xComp / r);
