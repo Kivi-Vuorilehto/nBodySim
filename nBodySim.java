@@ -85,11 +85,6 @@ public class nBodySim {
                 yPos[i] = yPos[i] + yVel[i] * simulationTimeIncrement;
             }
             k += simulationTimeIncrement;
-            /*System.out.println();
-            System.out.println(String.format("%-40s", "X Pos") + String.format("%-40s", "Y Pos") + String.format("%-40s", "X Vel") + String.format("%-40s", "Y Vel") + String.format("%-40s", "Mass") + String.format("%-40s", "Name") + String.format("%-40s", "Diameter"));
-            for (int i = 0; i < nOfBodies; i++) {
-                System.out.println(""+String.format("%-40s", xPos[i]) + String.format("%-40s", yPos[i]) + String.format("%-40s", xVel[i]) + String.format("%-40s", yVel[i]) + String.format("%-40s", mass[i]) + String.format("%-40s", name[i]) + String.format("%-40s", diameter[i]));
-            }*/
             Thread.sleep(300);
             drawWorld(diameter, xPos, yPos, name, divConst, universeRadius);
         }
@@ -97,10 +92,7 @@ public class nBodySim {
 
     private void drawWorld(Double[] diameter, Double[] xPos, Double[] yPos, String[] name, double divConst, int universeRad) {
         double universeLength = (universeRad * 2) / divConst;
-        //System.out.println();System.out.println();System.out.println();
-        //System.out.println("----------------------------------------------");//Clear the screen
-
-
+        
         String[][] world = new String[(int)(universeLength * 0.6)][(int)(universeLength)];
         for (String[] row: world)
             Arrays.fill(row, " ");
